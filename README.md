@@ -4,11 +4,17 @@ Calculates Simple and Log rates for any symbol in yahoo finance.
 Calculating the Rate of Return of DOGE coin using Python
 Disclaimer: This is for educational purposes only and not financial advice.
 Recently we have seen all over the internet and in real life an explosion of the DOGE coin phenomena. It is on a steady climb up, reaching new highs. As of writing this article, the price of 1 DOGE coin is $0.383291, But would it have been a good investment if you had got in earlier? We will find out using a rate of return calculator written in python.
+
 You can get the Jupyter notebook here.
+
 What is an Average Rate of Return?
+
 According to Investopedia, A rate of return (RoR) is the net gain or loss of an investment over a specified time period, expressed as a percentage of the investment's initial cost. When calculating the rate of return, you are determining the percentage change from the beginning of the period until the end.
+
 The rate of return (RoR) is used to measure the profit or loss of an investment over time.
+
 The metric of RoR can be used on a variety of assets, from crypto to stocks.
+
 The effects of inflation are not considered in the simple rate of return calculation or the logarithmic rate return. Still, they are in the real rate of return calculation.
 
 The source code is available as a Jupyter Notebook on my Github.
@@ -39,8 +45,7 @@ def get_ticker_symbol():
 def get_start_date():
   return input("Enter Start date from when you want to get data. Example: 2014-09-16 or enter for from the beginning of time: ")
 
-# Get's data for specified Crypto or Security - Use Yahoo Finanace website as 
-# reference.
+# Get's data for specified Crypto or Security - Use Yahoo Finanace website as reference.
 def get_data(ticker):  
   data = wb.DataReader(ticker, data_source='yahoo', start=start_date)
   return data
